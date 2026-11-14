@@ -76,3 +76,7 @@
 .qualifier-badge{width:15px;height:15px;flex:0 0 15px;margin-left:3px;vertical-align:baseline}
 .qualifier-star{width:13px;height:13px;max-width:13px;max-height:13px;object-fit:contain}
 @media(max-width:600px){.qualifier-badge{width:15px;height:15px;flex-basis:15px}.qualifier-star{width:13px;height:13px}}
+
+/* Fixed-size qualifier icons; override generic image styles */
+.player-card .player-meta-clean .qualifier-badge { display:inline-flex!important; width:16px!important; height:16px!important; flex:0 0 16px!important; align-items:center; justify-content:center; }
+.player-card .player-meta-clean .qualifier-badge > img.qualifier-star { display:block!important; width:14px!important; height:14px!important; max-width:14px!important; max-height:14px!important; min-width:0!important; min-height:0!important; object-fit:contain!important; }
