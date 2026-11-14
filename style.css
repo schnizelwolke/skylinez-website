@@ -58,3 +58,16 @@
 .footer .brand{gap:0}
 @media(max-width:900px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.match-row{grid-template-columns:90px 1fr 110px 40px}}
 @media(max-width:600px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.player-card{min-height:100px}.player-meta-clean{padding:14px 12px}.player-meta-clean h3{font-size:15px}.player-tracker-label{font-size:9px}.match-row{grid-template-columns:minmax(0,1fr) auto}.match-detail{display:block;grid-column:1;grid-row:auto}.match-date{grid-column:1}.match-result{grid-column:2;grid-row:1/5}.hero h1{font-size:clamp(55px,14vw,100px)}.site-header .brand{font-size:14px;letter-spacing:.06em}}
+
+/* Qualifier-Stern neben Spielernamen */
+.qualifier-badge{position:relative;display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;width:25px;height:25px;flex:0 0 25px;cursor:help;z-index:2}
+.qualifier-star{width:22px;height:22px;object-fit:contain;display:block;transition:transform .2s ease,filter .2s ease}
+.qualifier-badge:hover .qualifier-star,.qualifier-badge:focus-visible .qualifier-star{transform:scale(1.18);filter:drop-shadow(0 0 7px #ffe34d80)}
+.qualifier-badge::after{content:"EMEA Kickoff - Europe Qualifier participant";position:absolute;bottom:calc(100% + 9px);left:50%;transform:translateX(-50%) translateY(4px);background:#07192b;border:1px solid #258de6;color:#fff;padding:8px 10px;border-radius:7px;font:500 11px/1.35 var(--font);letter-spacing:0;white-space:normal;width:max-content;max-width:min(260px,80vw);opacity:0;visibility:hidden;pointer-events:none;box-shadow:0 10px 25px #0008;transition:opacity .15s,transform .15s;z-index:20}
+.qualifier-badge:hover::after,.qualifier-badge:focus-visible::after{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.player-card{overflow:visible}
+.player-meta-clean h3{overflow-wrap:anywhere}
+.match-link{cursor:pointer;transition:background .2s,border-color .2s;padding-left:12px;padding-right:12px}
+.match-link:hover,.match-link:focus-visible{background:#0e2741;border-color:#078bff}
+.match-link:hover .match-result{color:#078bff}
+@media(max-width:600px){.qualifier-badge{width:22px;height:22px;flex-basis:22px}.qualifier-star{width:19px;height:19px}.match-link{padding-left:8px;padding-right:8px}}
